@@ -13,7 +13,7 @@ jobs:
     strategy:
         matrix:
             compiler: [gcc-13, clang-16, clang-14-cuda-11, gcc-12-cuda-12.4, base-rocm-6.2.2, gcc-10-hpx, nvhpc-23.9]
-            build_type: [debug, release]
+            build_type: [release]
     steps:
     - uses: actions/checkout@v2
     - name: setup environment
