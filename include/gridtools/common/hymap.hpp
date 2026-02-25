@@ -198,8 +198,10 @@ namespace gridtools {
             template <class...>
             struct values;
 
+#if defined(__clang__) || (defined(__GNUC__) && __GNUC__ >= 11)
             template <class... Vs>
             values(Vs const &...) -> values<Vs...>;
+#endif
 
             // NVCC 11 fails to do class template deduction in the case of nested templates
             template <class... Args>
