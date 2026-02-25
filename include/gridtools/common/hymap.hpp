@@ -198,7 +198,7 @@ namespace gridtools {
             template <class...>
             struct values;
 
-#if defined(__clang__) || (defined(__GNUC__) && __GNUC__ >= 11)
+#if defined(__clang__) || (defined(__GNUC__) && __GNUC__ >= 12)
             template <class... Vs>
             values(Vs const &...) -> values<Vs...>;
 #endif
