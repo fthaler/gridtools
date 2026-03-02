@@ -141,7 +141,6 @@ lines to your CMake project
   FetchContent_Declare(GridTools
       URL https://github.com/GridTools/gridtools/archive/<release_tag>.tar.gz
   )
-  FetchContent_GetProperties(GridTools)
   FetchContent_MakeAvailable(GridTools)
 
 where *<release_tag>* is the git tag of the |GT| release, e.g. ``v2.0.0``.
